@@ -102,6 +102,20 @@ class ParkingTest {
 		assertEquals(15,p.retirer(v, 3));
 	}
 	
+	@Test
+	void test10() {
+		Parking p = new Parking(100, 10,(float) 0.5);
+		Ambulance a = new Ambulance("A123");
+		Ambulance a1 = new Ambulance("A1234");
+		p.ajouter(a);
+		p.ajouter(a1);
+		
+		assertEquals(15,p.retirer(a, 3));
+		assertEquals(10,p.retirer(a1, 2));
+		
+		
+	}
+	
 	
 	
 	
