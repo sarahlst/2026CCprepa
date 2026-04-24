@@ -47,7 +47,7 @@ class ParkingTest {
 		assertEquals(10,p.getNbPlacesLibres());
 	}
 	
-	/*@Test
+	@Test
 	void test5() {
 		Parking p = new Parking(10,3);
 		Vehicule v = new Vehicule("1");
@@ -55,7 +55,7 @@ class ParkingTest {
 	    Parking p1 = new Parking(0,3);
 	    assertEquals(false,p1.ajouter(v));
 	    
-	}*/
+	}
 	
 	
 }
