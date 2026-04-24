@@ -57,5 +57,15 @@ class ParkingTest {
 	    
 	}
 	
+	@Test
+	void test6() {
+		Parking p = new Parking(10,3);
+		Vehicule v = new Vehicule("1");
+		Vehicule v1 = new Vehicule("2");
+		p.ajouter(v);
+		assertEquals(true,p.contient(v));
+		assertEquals(false,p.contient(v1));
+	}
+	
 	
 }
