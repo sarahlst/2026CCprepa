@@ -27,5 +27,14 @@ class ParkingTest {
 		assertEquals(9,p.getNbPlacesLibres());
 
 	}
-
+	
+	@Test
+	void test3() {
+		Parking p = new Parking(10);
+		Vehicule v = new Vehicule("1");
+		p.ajouter(v);
+		p.retirer(v);
+		assertEquals(10,p.getNbPlacesLibres());
+       //ici on la rajoute apres on reicremente
+	}
 }
