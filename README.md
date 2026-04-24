@@ -1,1 +1,16 @@
 # 2026CCprepa
+# Identification du projet
+
+### NOM : Laouisset
+### Prénom : Sarah
+### Groupe de TP : B12
+(Éditez ce README.md et remplacez `[ ]` par `[x]` (*x* minuscule) dans la bonne ligne ci-dessous)
+- [ ] A11
+- [ ] A12
+- [ ] A21
+- [ ] A22
+- [ ] B11
+- [x] B12
+- [ ] B21
+- [ ] B22
+
