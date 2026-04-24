@@ -12,7 +12,9 @@ public class Parking {
 		return nbPlacesLibres;
 	}
 
-	
-	
-	
+	public void ajouter(Vehicule v) {
+		nbPlacesLibres--;
+		// on ajoute un vehicule veut dire on decremente le nombre de place 
+	}
+
 }
