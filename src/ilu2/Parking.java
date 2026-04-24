@@ -7,6 +7,12 @@ public class Parking {
 	public Parking(int nbPlaces) {
 		this.nbPlacesLibres = nbPlaces;
 	}
+
+	public int getNbPlacesLibres() {
+		return nbPlacesLibres;
+	}
+
+	
 	
 	
 }
