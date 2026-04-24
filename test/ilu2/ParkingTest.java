@@ -67,5 +67,42 @@ class ParkingTest {
 		assertEquals(false,p.contient(v1));
 	}
 	
+	@Test
+	void test7() {
+		Parking p1 = new Parking(100, 0);
+		Parking p2 = new Parking(100, 0);
+		Vehicule v = new Vehicule("1");
+		p1.ajouter(v);
+		assertEquals(0,p1.retirer(v, 5));
+		assertThrows(IllegalArgumentException.class, () -> {
+			p2.retirer(v, 1);
+			});
+
+	}
+	
+	@Test 
+	void test8() {
+		Parking p1 = new Parking(100, 0);
+		Parking p2 = new Parking(100, 0);
+		Vehicule v = new Vehicule("1");
+		v.abonner(p1);
+		assertEquals(true,v.estAbonne(p1));
+		assertEquals(false,v.estAbonne(p2));
+		
+
+	}
+	
+	@Test
+	void test9() {
+		Parking p = new Parking(100, 10,(float) 0.5);
+		Vehicule v = new Vehicule("1");
+		v.abonner(p);
+		p.ajouter(v);
+		
+		assertEquals(15,p.retirer(v, 3));
+	}
+	
+	
+	
 	
 }
