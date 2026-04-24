@@ -3,22 +3,34 @@ package ilu2;
 public class Parking {
 
 	private int nbPlacesLibres;
+	private int tarifHoraire;
 
-	public Parking(int nbPlaces) {
+	/*
+	 * dans l'iteration 4 on peut faire un autre constructeur mais moi je choisis de
+	 * modifier le constructeur 1
+	 */
+	public Parking(int nbPlaces, int tarif) {
 		this.nbPlacesLibres = nbPlaces;
+		this.tarifHoraire = tarif;
 	}
 
 	public int getNbPlacesLibres() {
 		return nbPlacesLibres;
 	}
 
-	public void ajouter(Vehicule v) {
-		nbPlacesLibres--;
-		// on ajoute un vehicule veut dire on decremente le nombre de place 
+	public boolean ajouter(Vehicule v) {
+		if (nbPlacesLibres == 0) {
+			return false;
+		} else {
+			nbPlacesLibres--;
+			return true;
+		}
 	}
-	
-	public void retirer(Vehicule v) {
+
+	public int retirer(Vehicule v, int nbrHeures) {
 		nbPlacesLibres++;
+		return nbrHeures * tarifHoraire;
+
 	}
 
 }
